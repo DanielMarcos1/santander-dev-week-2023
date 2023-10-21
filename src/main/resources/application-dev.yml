@@ -1,0 +1,22 @@
+spring:
+  app:
+  runMode: development  # Set this value as needed (e.g., "development" or "production")
+  datasource: # Criar um banco H2 com as seguintes definições:
+    url: jdbc:h2:mem:sdw2023
+    username: sdw2023
+    password: 
+  jpa: #Configurar o JPA 
+    show-sql: true # show-sql pra deixar definições mais verbosas
+    open-in-view: false
+    hibernate:
+      ddl-auto: create # validade / update / create / create-drop, deixar o hibernate criar as tabelas
+    properties:
+      hibernate:
+        format_sql: true
+  h2: # Set um banco h2 que pode ser acessado via browser
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        trace: false
+        web-allow-others: false      

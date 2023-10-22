@@ -1,15 +1,12 @@
 package me.dio.controller;
 
 import me.dio.domain.model.User;
-import me.dio.domain.service.UserService;
-import org.hibernate.bytecode.internal.bytebuddy.BytecodeProviderImpl;
+import me.dio.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
-
-import static org.springframework.web.servlet.function.RequestPredicates.path;
 
 @RestController
 @RequestMapping("/users") // Contexto users

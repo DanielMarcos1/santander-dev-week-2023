@@ -26,7 +26,10 @@ dependencies {
 
 tasks.jar {
 	manifest {
-		attributes["Main-Class"] = "me.dio.Application"
+		attributes (
+				'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+				'Main-Class': 'me.dio.Application'
+		)
 	}
 }
 
